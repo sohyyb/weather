@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #100e1d;
+}
+@import "components/sidebar";
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.days {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+  .day {
+    color: white;
+    width: 120px;
+    height: 177px;
+    background-color: #1e213a;
+    // text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 100%;
+      width: 56px;
+      height: 62px;
+    }
+  }
+  .temperature {
+    display: flex;
+    margin-top: 13px;
+    gap: 20px;
+    :nth-child(2) {
+      color: #a09fb1;
+    }
+  }
+}
+.text {
+  color: white;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  .head {
+    color: white;
+    margin-top: 30px;
+  }
+  .boxes {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-top: 30px;
+    gap: 50px;
+    margin-bottom: 30px;
+    .box {
+      background-color: #1e213a;
+      width: 328px;
+      height: 204px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      gap: 20px;
+
+      span {
+        display: block;
+        height: 8px;
+        position: relative;
+        background-color: #ffec65;
+        border-radius: 3px;
+        margin-top: 16px;
+        &::before {
+          content: attr(data-progress);
+          color: white;
+          background-color: none;
+          position: absolute;
+          top: -40px;
+          text-align: center;
+          font-size: 12px;
+          right: 0px;
+          margin-top: 10px;
+          padding: 3px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #100e1d;
+}
+
+.sidebar {
+  width: 400px;
+  min-height: 100vh;
+  max-width: 100%;
+  background-color: #1e213a;
+}
+.sidebar button {
+  padding: 12px;
+  width: 120;
+  margin-left: 10px;
+  background-color: #6e707a;
+  width: 161px;
+  height: 40px;
+  color: white;
+  cursor: pointer;
+}
+.sidebar .weather-img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+}
+.sidebar .weather-img .background {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0.095;
+}
+.sidebar .weather-img .weather {
+  max-width: 150px;
+  position: absolute;
+}
+.sidebar h1 {
+  color: white;
+  font-size: 80px;
+  text-align: center;
+}
+.sidebar h1 sub sup {
+  font-size: 25px;
+}
+.sidebar .day {
+  color: white;
+  margin-top: 60px;
+  text-align: center;
+}
+.sidebar h2 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.days {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+}
+.days .day {
+  color: white;
+  width: 120px;
+  height: 177px;
+  background-color: #1e213a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.days .day img {
+  max-width: 100%;
+  width: 56px;
+  height: 62px;
+}
+.days .temperature {
+  display: flex;
+  margin-top: 13px;
+  gap: 20px;
+}
+.days .temperature :nth-child(2) {
+  color: #a09fb1;
+}
+
+.text {
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.content .head {
+  color: white;
+  margin-top: 30px;
+}
+.content .boxes {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin-top: 30px;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+.content .boxes .box {
+  background-color: #1e213a;
+  width: 328px;
+  height: 204px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+}
+.content .boxes .box span {
+  display: block;
+  height: 8px;
+  position: relative;
+  background-color: #ffec65;
+  border-radius: 3px;
+  margin-top: 16px;
+}
+.content .boxes .box span::before {
+  content: attr(data-progress);
+  color: white;
+  background-color: none;
+  position: absolute;
+  top: -40px;
+  text-align: center;
+  font-size: 12px;
+  right: 0px;
+  margin-top: 10px;
+  padding: 3px;
+}/*# sourceMappingURL=main.css.map */
