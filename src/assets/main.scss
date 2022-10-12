@@ -10,11 +10,15 @@ body {
 .container {
   display: flex;
   justify-content: space-around;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 }
 .days {
   margin-top: 40px;
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
   .day {
     color: white;
     width: 120px;
